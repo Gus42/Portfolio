@@ -1,0 +1,118 @@
+/*  DEFAULT =================================================*/
+* {
+	font-family: 'Didact Gothic', sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #F6E3CE;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+@media (min-width: 980px) {
+	.wrapper {
+		max-width: 980px;
+		margin: 0 auto;
+	}
+}
+
+._clear {
+	clear: both;
+}
+
+/*  FLEXBOX =================================================*/
+
+.flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+/*  SPECIFIC =================================================*/
+
+.link {
+	float: right;
+}
+
+.icon {
+	height: 25px;
+	margin: 2px;
+}
+
+.title {
+	margin-top: 0;
+	font-size: 40px;
+	color: #FF8000;
+}
+
+.subtitle {
+	font-size: 20px;
+	margin-left: 1%;
+	color: grey;
+}
+
+/* APP STYLE */
+.app {
+	width: 31.33%;
+	background-color: white;
+	border: 1px solid silver;
+	padding: 10px;
+	margin: 1%;
+}
+
+.app:hover {
+	cursor: pointer;
+}
+
+.app-title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.app-img {
+	width: 100%;
+}
+
+.app-skills {
+	color: grey;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.date {
+	float: right;
+	color: darkblue;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.description {
+
+}
+
+.github {
+
+}

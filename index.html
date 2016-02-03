@@ -4,38 +4,50 @@
     <title>Portfolio</title>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
+        <div class="link">
+            <a href="https://www.linkedin.com/in/francescogusella"><img class="icon" src="img/icon-linkedin.png" title="See my LinkedIn profile"></a>
+            <a href="https://github.com/Gus42"><img class="icon" src="img/icon-github.png" title="Go to my Github's account"></a>
+            <a href=""><img class="icon" src="img/icon-cv.png" title="Download my cv in pdf"></a>
+        </div>
+        <div class="_clear"></div>
         <header>
-            <h1>Francesco Gusella</h1><span>portfolio</span>
-            <div class="icons">
-                <a href=""><img src="" title="LinkedIn's icon'"></a>
-                <a href=""><img src="" title="GitHub's icon'"></a>
-                <a href=""><img src="" title="curiculum pdf icon"></a>
-            </div>
+            <h1 class="title">Francesco Gusella<span class="subtitle">portfolio</span></h1>
         </header>
-        <nav class="nav-bar">
-            <ul>
-                <li>My projects</li>
-                <li>About Me</li>
-                <li>Contacts</li>
-            </ul>
+        <nav class="nav-bar flex space-around">
+                <a href="#projects" class="">My projects</a>
+                <a href="#me" class="">About Me</a>
+                <a href="#contacts" class="">Contacts</a>
         </nav>
         <section class="content">
             <h3>My Projects</h3>
             <div class="filter">
                 <div class="filter-bar">Filter</div>
                 <div class="filter-table">
-                    <ul class="skills">
-                        <li></li>
+                    <ul class="skills" data-bind="foreach: skills">
+                        <input type="checkbox" data-bind="checked: $data.check" /><span data-bind="text: $data.skill"></span>
                     </ul>
                 </div>
             </div>
-            <ul class="projects">
-                <li></li>
+            <ul class="projects flex" data-bind="foreach: projectsVisible">
+                <a class="app space-between">
+                    <div class="app-title" data-bind="text: $data.name"></div>
+                    <img class="app-img" data-bind="attr:{src: $data.img}">
+                    <div class="app-skills" data-bind="text: $data.skills"></div>
+                    <div class="date" data-bind="text: $data.date"></div>
+                    <div class="_clear"></div>
+                    <div class="description" data-bind="text: $data.description"></div>
+                    <a class="github" href=""></a>
+                </a>
             </ul>
         </section>
     </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
