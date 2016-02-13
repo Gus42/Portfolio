@@ -53,6 +53,64 @@ ul {
 
 /*  SPECIFIC =================================================*/
 
+.filter-bar {
+	font-weight: bold;
+	color: #111;
+	cursor: pointer;
+	width: 60px;
+	background-color: #acb;
+	padding: 5px;
+}
+
+.filter-bar-open:after {
+	content: "";
+	position: relative;
+	left: 5px;
+	top: 16px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7px 5px 0 5px;
+	border-color: #007bff transparent transparent transparent;
+}
+
+.filter-bar-close:after {
+	content: "";
+	position: relative;
+	left: 5px;
+	top: -13px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 7px 5px;
+	border-color: transparent transparent #737d87 transparent;
+}
+
+.filter-table {
+	position: absolute;
+	margin-left: 40px;
+	margin-top: 5px;
+	width: 50%;
+	background-color: rgba(115, 125, 135, 0.9);
+	padding: 8px;
+	border: 1px solid #007bff;
+}
+
+.filter-btn {
+	cursor: pointer;
+	float: left;
+	padding: 2px;
+	background-color: rgba(255, 255, 255, 0.9);;
+	border: 1px solid white;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+
+.skill {
+	float: left;
+	width: 33%;
+}
+
 .link {
 	float: right;
 }
@@ -114,5 +172,10 @@ ul {
 }
 
 .github {
+
+}
+
+/* APP DETAILED */
+.app-complete {
 
 }

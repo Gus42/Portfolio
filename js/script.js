@@ -3,29 +3,29 @@ var projectsList = [
 	{
 		"name": "This Portfolio",
 		"img": "img/k.jpg",
-		"link": "",
-		"date": "",
+		"link": "http://gus42.github.io/Portfolio/",
+		"date": "02/2016",
 		"skills": ["HTML","CSS","JavaScript","Knockout.js","MVC"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Portfolio"
 	},
 	{
 		"name": "Linux Server Configuration",
 		"img": "img/k.jpg",
 		"link": "",
-		"date": "",
-		"skills": ["Linux","Vagrant"],
+		"date": "30/12/2015",
+		"skills": ["Linux","Vagrant","Shell Commands"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Linux-Server-Configuration"
 	},
 	{
 		"name": "Conference Organization App",
 		"img": "img/k.jpg",
 		"link": "",
-		"date": "",
+		"date": "31/12/2015",
 		"skills": ["Python","Google App Engine"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Conference-Organization-App"
 	},
 	{
 		"name": "Item Catalog",
@@ -58,10 +58,10 @@ var projectsList = [
 		"name": "Percolation",
 		"img": "img/k.jpg",
 		"link": "",
-		"date": "",
+		"date": "13/10/2015",
 		"skills": ["Java"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Percolation"
 	},
 	{
 		"name": "Jasmine",
@@ -126,23 +126,44 @@ var ViewModel = function() {
 
 	self.skills = skills;
 
-	//Projects visible
+
+
+	// Projects visible
 	self.projectsVisible = ko.computed( function() {
 		projects = [];
 		projectsList.forEach(function(project) {
-			console.log("here1");
 			if (commonElementInArrays(project.skills,self.skills)) {
-				console.log("here2");
-				console.log(self.skills[0].check);
 				projects.push(project);
 			}
 		});
 		return projects;
 	});
-	document.addEventListener("click", function(){
-    	console.log(self.skills[0].check);
-	});
+
+	// Open App
+	appDetail = ko.observable(false);
+
+	self.openApp = function(app) {
+		console.log(this);
+	}
+
+	// TOGGLE FILTERS
+	filtersVisible = ko.observable(false);
+	self.toggleFilters = function() {
+		filtersVisible(!filtersVisible());
+	}
+
+	self.toggleAllFilters = function() {
+		self.skills.forEach(function(skill) {
+			skill.check(!skill.check());
+		});
+	}
+
+	self.unselectedAllFilters = function() {
+		self.skills.forEach(function(skill) {
+			skill.check(false);
+		});
+	}
+
 };
 
 ko.applyBindings(new ViewModel());
-
