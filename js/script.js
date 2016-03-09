@@ -161,10 +161,10 @@ var projectsList = [
 		"link": "",
 		"date": "28/05/2015",
 		"skills": ["HTML/CSS"],
-		"description": "La pagina price4you fu un'esercitazione condotta durante un tirocinio in Lettonia."
-						+"<br /> - Scritto in HTML e CSS3."
-						+"\n\n\n\n"+" - E' la fedele riproduzione in codice del design desiderato."
-						+"Hello\n\nTest - Ho utilizzato Adobe Photoshop per riprodurre fedelmente colori e misure del sito.",
+		"description": "La pagina price4you nasce da un'esercitazione condotta durante un tirocinio in Lettonia."
+						+"<br>- Scritto in HTML e CSS3."
+						+"<br>- E' la fedele riproduzione in codice del design desiderato."
+						+"<br>- Ho utilizzato Adobe Photoshop per riprodurre fedelmente colori e misure del sito.",
 		"github": ""
 	}
 ];

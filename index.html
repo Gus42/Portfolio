@@ -15,16 +15,16 @@
             <a href=""><img class="icon" src="img/icon-cv.png" title="Download my cv in pdf"></a>
         </div>
         <div class="_clear"></div>
+        <div class="contacts">
+            <div>e-mail gus815@gmail.com</div>
+            <div>Tel. 333 3952481</div>
+        </div>
+        <div class="_clear"></div>
         <header>
             <h1 class="title">Francesco Gusella<span class="subtitle">portfolio</span></h1>
         </header>
-        <nav class="nav-bar flex space-around">
-                <a href="#projects" class="">My projects</a>
-                <a href="#me" class="">About Me</a>
-                <a href="#contacts" class="">Contacts</a>
-        </nav>
         <section class="content">
-            <h3>My Projects</h3>
+            <h3>My Projects:</h3>
             <div class="filter">
                 <div class="filter-bar" data-bind="
                     click: toggleFilters,
@@ -56,11 +56,11 @@
     <div class="wrapper">
         <div class="app-complete" data-bind="visible: appDetail, foreach: app">
             <div class="app-title" data-bind="text: $data.name"></div>
-            <img class="app-complete-img" data-bind="attr:{src: $data.img}">
+            <div class="app-img-box"><img class="app-img" data-bind="attr:{src: $data.img}"></div>
             <div class="app-skills" data-bind="text: $data.skills"></div>
             <div class="date" data-bind="text: $data.date"></div>
             <div class="_clear"></div>
-            <div class="description" data-bind="text: $data.description"></div>
+            <div class="description" data-bind="html: $data.description"></div>
             <a class="github" href="" data-bind="text: $data.github"></a>
         </div>
     </div>

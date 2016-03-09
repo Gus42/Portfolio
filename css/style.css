@@ -120,6 +120,13 @@ ul {
 	margin: 2px;
 }
 
+.contacts {
+	float: right;
+	text-align: right;
+	color: grey;
+	font-size: 13px;
+}
+
 .title {
 	margin-top: 0;
 	font-size: 40px;
@@ -150,6 +157,11 @@ ul {
 	margin-bottom: 10px;
 }
 
+.app-img-box {
+	max-height: 50%;
+	overflow: hidden;
+}
+
 .app-img {
 	width: 100%;
 }
@@ -178,31 +190,36 @@ ul {
 /* APP DETAILED */
 .app-complete {
 	position: fixed;
-	top: 0;
 	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 50%;
-    margin: 1% 25%;
+    margin: 0 25%;
     z-index: 5;
-
     background-color: LightCyan;
     border: 1px solid silver;
 	padding: 10px;
+
 }
 
+
+
 .app-complete-img {
-	height: 50%;
-	width: 100%;
-	overflow: hidden;
 }
 
 @media (max-width: 440px) {
 	.app {
-		width: 94%;
+		width: 98%;
 	}
 
 	.app-complete {
-		width: 100%;
-		margin: 1% 0;
+		width: 98%;
+		margin: 0 1%;
+		top: 50%;
+  		transform: translateY(-50%);
+	}
+
+	.app-complete-img {
 	}
 
 	.filter-table {
