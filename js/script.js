@@ -159,9 +159,12 @@ var projectsList = [
 		"name": "price4you",
 		"img": "img/price4you.png",
 		"link": "",
-		"date": "",
+		"date": "28/05/2015",
 		"skills": ["HTML/CSS"],
-		"description": "",
+		"description": "La pagina price4you fu un'esercitazione condotta durante un tirocinio in Lettonia."
+						+"<br /> - Scritto in HTML e CSS3."
+						+"\n\n\n\n"+" - E' la fedele riproduzione in codice del design desiderato."
+						+"Hello\n\nTest - Ho utilizzato Adobe Photoshop per riprodurre fedelmente colori e misure del sito.",
 		"github": ""
 	}
 ];
