@@ -177,5 +177,23 @@ ul {
 
 /* APP DETAILED */
 .app-complete {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+    margin: 1% 25%;
+    z-index: 5;
 
+    background-color: LightCyan;
+    border: 1px solid silver;
+	padding: 10px;
+
+
+	text-align: center;
+}
+
+.app-complete-img {
+	height: 50%;
+	width: 100%;
+	overflow: hidden;
 }
