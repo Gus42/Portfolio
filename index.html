@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 </head>
-<body>
-    <div class="wrapper">
+<body class="body">
+    <div class="wrapper opacity">
         <div class="link">
             <a href="https://www.linkedin.com/in/francescogusella"><img class="icon" src="img/icon-linkedin.png" title="See my LinkedIn profile"></a>
             <a href="https://github.com/Gus42"><img class="icon" src="img/icon-github.png" title="Go to my Github's account"></a>
@@ -52,8 +52,16 @@
                 </div>
             </ul>
         </section>
-        <div class="app-complete" data-bind="visible: appDetail">
-            <div class="">ss</div>
+    </div>
+    <div class="wrapper">
+        <div class="app-complete" data-bind="visible: appDetail, foreach: app">
+            <div class="app-title" data-bind="text: $data.name"></div>
+            <img class="app-complete-img" data-bind="attr:{src: $data.img}">
+            <div class="app-skills" data-bind="text: $data.skills"></div>
+            <div class="date" data-bind="text: $data.date"></div>
+            <div class="_clear"></div>
+            <div class="description" data-bind="text: $data.description"></div>
+            <a class="github" href="" data-bind="text: $data.github"></a>
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>

@@ -5,13 +5,13 @@ var projectsList = [
 		"img": "img/k.jpg",
 		"link": "http://gus42.github.io/Portfolio/",
 		"date": "02/2016",
-		"skills": ["HTML","CSS","JavaScript","Knockout.js","MVC"],
+		"skills": ["HTML/CSS","JavaScript","Knockout.js","MVC"],
 		"description": "",
 		"github": "https://github.com/Gus42/Portfolio"
 	},
 	{
 		"name": "Linux Server Configuration",
-		"img": "img/k.jpg",
+		"img": "img/linux-server.png",
 		"link": "",
 		"date": "30/12/2015",
 		"skills": ["Linux","Vagrant","Shell Commands"],
@@ -20,7 +20,7 @@ var projectsList = [
 	},
 	{
 		"name": "Conference Organization App",
-		"img": "img/k.jpg",
+		"img": "img/conference.png",
 		"link": "",
 		"date": "31/12/2015",
 		"skills": ["Python","Google App Engine"],
@@ -32,7 +32,7 @@ var projectsList = [
 		"img": "img/k.jpg",
 		"link": "",
 		"date": "",
-		"skills": ["HTML","CSS","Python","Flask","SQL"],
+		"skills": ["HTML/CSS","Python","Flask","SQL"],
 		"description": "",
 		"github": ""
 	},
@@ -56,7 +56,7 @@ var projectsList = [
 	},
 	{
 		"name": "Percolation",
-		"img": "img/k.jpg",
+		"img": "img/percolation.png",
 		"link": "",
 		"date": "13/10/2015",
 		"skills": ["Java"],
@@ -74,14 +74,95 @@ var projectsList = [
 	},
 	{
 		"name": "Neighborhood Map",
-		"img": "img/k.jpg",
+		"img": "img/neighborhood-map.png",
 		"link": "http://gus42.github.io/Neighborhood-Map/",
 		"date": "06/10/2015",
-		"skills": ["HTML","CSS","JavaScript","MVC","Knockout.js","Google Maps API","Foursquare API"],
+		"skills": ["HTML/CSS","JavaScript","MVC","Knockout.js","Google Maps API","Foursquare API"],
 		"description": "Neighborhood-Map is a single page application, it is the 5th project of Front-End Web Developer Nanodegree of Udacity."+
 					   "It shows some parks in Nottingham city (UK), the user can search a park in the list or use the map to select it."+
 					   "A selected park will show the nearest restaurants to it.",
 		"github": "https://github.com/Gus42/Neighborhood-Map"
+	},
+	{
+		"name": "Website Optimization",
+		"img": "img/k.jpg",
+		"link": "",
+		"date": "",
+		"skills": ["HTML/CSS"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "Classic Arcade Game Clone",
+		"img": "img/k.jpg",
+		"link": "",
+		"date": "",
+		"skills": ["HTML5:Canvas","JavaScript"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "Interactive Resume",
+		"img": "img/k.jpg",
+		"link": "",
+		"date": "",
+		"skills": ["HTML/CSS"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "Basic Portfolio",
+		"img": "img/k.jpg",
+		"link": "",
+		"date": "",
+		"skills": ["HTML/CSS"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "Cobweb",
+		"img": "img/k.jpg",
+		"link": "",
+		"date": "",
+		"skills": ["HTML5:Canvas","JavaScript","JQuery"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "Facebook Reviews",
+		"img": "img/k.jpg",
+		"link": "",
+		"date": "",
+		"skills": ["HTML/CSS","JavaScript","PHP","Facebook Graph API"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "Widescreen Slider",
+		"img": "img/k.jpg",
+		"link": "",
+		"date": "",
+		"skills": ["HTML/CSS","JavaScript"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "Bekeris",
+		"img": "img/bekeris.png",
+		"link": "",
+		"date": "",
+		"skills": ["HTML/CSS","JavaScript"],
+		"description": "",
+		"github": ""
+	},
+	{
+		"name": "price4you",
+		"img": "img/price4you.png",
+		"link": "",
+		"date": "",
+		"skills": ["HTML/CSS"],
+		"description": "",
+		"github": ""
 	}
 ];
 
@@ -126,8 +207,6 @@ var ViewModel = function() {
 
 	self.skills = skills;
 
-
-
 	// Projects visible
 	self.projectsVisible = ko.computed( function() {
 		projects = [];
@@ -138,13 +217,6 @@ var ViewModel = function() {
 		});
 		return projects;
 	});
-
-	// Open App
-	appDetail = ko.observable(false);
-
-	self.openApp = function(app) {
-		console.log(this);
-	}
 
 	// TOGGLE FILTERS
 	filtersVisible = ko.observable(false);
@@ -163,6 +235,49 @@ var ViewModel = function() {
 			skill.check(false);
 		});
 	}
+
+	// Open App
+	appDetail = ko.observable(false);
+	app = ko.observable();
+	self.openApp = function() {
+		app(this);
+	}
+
+	/*
+	document.addEventListener("click", function(e) {
+		console.log("Sto cliccando: "+ e.target);
+	});
+
+	//document.getElementsByTagName("html")[0].click(function() {
+	document.getElementsByClassName("body")[0].click(function() {
+		console.log("Hido la app");
+		document.getElementsByClassName("app-complete").style.display = 'none';
+	});
+
+	document.getElementsByClassName("app-complete")[0].click(function(event) {
+		console.log("fermo l'evento");
+	    event.stopPropagation();
+	});
+	*/
+
+	$("html").click(function() {
+		console.log("aaaHido la app appdetail e':"+appDetail());
+		if(app()!=null){
+			if(appDetail()){
+				appDetail(false);
+				app(null);
+				$(".opacity").css('opacity', '1');
+			}else{
+				appDetail(true);
+				$(".opacity").css('opacity', '0.2');
+			}
+		}
+	});
+
+	$(".app-complete").click(function(event) {
+		console.log("fermo l'evento");
+	    event.stopPropagation();
+	});
 
 };
 
