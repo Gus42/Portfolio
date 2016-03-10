@@ -65,11 +65,11 @@ var projectsList = [
 	},
 	{
 		"name": "Jasmine",
-		"img": "img/k.jpg",
+		"img": "img/jasmine.png",
 		"link": "",
 		"date": "",
-		"skills": ["Jasmine"],
-		"description": "",
+		"skills": ["TDD","Jasmine"],
+		"description": "In this Project I used for the first time a framework for the test drive development of JavaScript",
 		"github": ""
 	},
 	{
@@ -94,7 +94,7 @@ var projectsList = [
 	},
 	{
 		"name": "Classic Arcade Game Clone",
-		"img": "img/k.jpg",
+		"img": "img/arcade.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML5:Canvas","JavaScript"],
@@ -135,11 +135,11 @@ var projectsList = [
 		"date": "",
 		"skills": ["HTML/CSS","JavaScript","PHP","Facebook Graph API"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Review"
 	},
 	{
 		"name": "Widescreen Slider",
-		"img": "img/k.jpg",
+		"img": "img/slider.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML/CSS","JavaScript"],
