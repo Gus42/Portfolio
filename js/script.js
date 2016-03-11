@@ -2,10 +2,10 @@
 var projectsList = [
 	{
 		"name": "This Portfolio",
-		"img": "img/k.jpg",
+		"img": "img/portfolio.png",
 		"link": "http://gus42.github.io/Portfolio/",
 		"date": "Febbraio 2016",
-		"skills": ["HTML/CSS","JavaScript","Knockout.js","MVC"],
+		"skills": ["HTML/CSS","JavaScript","Knockout.js"],
 		"description": "",
 		"github": "https://github.com/Gus42/Portfolio"
 	},
@@ -29,7 +29,7 @@ var projectsList = [
 	},
 	{
 		"name": "Item Catalog",
-		"img": "img/k.jpg",
+		"img": "img/catalog.png",
 		"link": "",
 		"date": "Dicembre 2015",
 		"skills": ["HTML/CSS","Python","Flask","SQL"],
@@ -38,19 +38,10 @@ var projectsList = [
 	},
 	{
 		"name": "Tournament Results",
-		"img": "img/k.jpg",
+		"img": "img/tournament.png",
 		"link": "",
 		"date": "",
 		"skills": ["Python","SQL"],
-		"description": "",
-		"github": ""
-	},
-	{
-		"name": "Movie Trailer",
-		"img": "img/k.jpg",
-		"link": "",
-		"date": "",
-		"skills": ["Python"],
 		"description": "",
 		"github": ""
 	},
@@ -77,20 +68,11 @@ var projectsList = [
 		"img": "img/neighborhood-map.png",
 		"link": "http://gus42.github.io/Neighborhood-Map/",
 		"date": "Ottobre 2015",
-		"skills": ["HTML/CSS","JavaScript","MVC","Knockout.js","Google Maps API","Foursquare API"],
+		"skills": ["HTML/CSS","JavaScript","Knockout.js","Google Maps API","Foursquare API"],
 		"description": "Neighborhood-Map is a single page application, it is the 5th project of Front-End Web Developer Nanodegree of Udacity."+
 					   "It shows some parks in Nottingham city (UK), the user can search a park in the list or use the map to select it."+
 					   "A selected park will show the nearest restaurants to it.",
 		"github": "https://github.com/Gus42/Neighborhood-Map"
-	},
-	{
-		"name": "Website Optimization",
-		"img": "img/k.jpg",
-		"link": "",
-		"date": "",
-		"skills": ["HTML/CSS"],
-		"description": "",
-		"github": ""
 	},
 	{
 		"name": "Classic Arcade Game Clone",
@@ -102,17 +84,8 @@ var projectsList = [
 		"github": ""
 	},
 	{
-		"name": "Interactive Resume",
-		"img": "img/k.jpg",
-		"link": "",
-		"date": "",
-		"skills": ["HTML/CSS"],
-		"description": "Settembre 2015",
-		"github": ""
-	},
-	{
 		"name": "Basic Portfolio",
-		"img": "img/k.jpg",
+		"img": "img/udacity-portfolio.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML/CSS"],
@@ -121,7 +94,7 @@ var projectsList = [
 	},
 	{
 		"name": "Cobweb",
-		"img": "img/k.jpg",
+		"img": "img/cobweb.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML5:Canvas","JavaScript","JQuery"],
@@ -130,7 +103,7 @@ var projectsList = [
 	},
 	{
 		"name": "Facebook Reviews",
-		"img": "img/k.jpg",
+		"img": "img/reviews.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML/CSS","JavaScript","PHP","Facebook Graph API"],

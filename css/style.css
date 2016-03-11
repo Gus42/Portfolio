@@ -84,19 +84,19 @@ header {
 	content: "";
 	position: relative;
 	left: 5px;
-	top: 16px;
+	top: 20px;
 	width: 0;
 	height: 0;
 	border-style: solid;
 	border-width: 7px 5px 0 5px;
-	border-color: #007bff transparent transparent transparent;
+	border-color: green transparent transparent transparent;
 }
 
 .filter-bar-close:after {
 	content: "";
 	position: relative;
 	left: 5px;
-	top: -13px;
+	top: -17px;
 	width: 0;
 	height: 0;
 	border-style: solid;
