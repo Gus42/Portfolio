@@ -4,7 +4,7 @@ var projectsList = [
 		"name": "This Portfolio",
 		"img": "img/k.jpg",
 		"link": "http://gus42.github.io/Portfolio/",
-		"date": "02/2016",
+		"date": "Febbraio 2016",
 		"skills": ["HTML/CSS","JavaScript","Knockout.js","MVC"],
 		"description": "",
 		"github": "https://github.com/Gus42/Portfolio"
@@ -13,7 +13,7 @@ var projectsList = [
 		"name": "Linux Server Configuration",
 		"img": "img/linux-server.png",
 		"link": "",
-		"date": "30/12/2015",
+		"date": "Dicembre 2015",
 		"skills": ["Linux","Vagrant","Shell Commands"],
 		"description": "",
 		"github": "https://github.com/Gus42/Linux-Server-Configuration"
@@ -22,7 +22,7 @@ var projectsList = [
 		"name": "Conference Organization App",
 		"img": "img/conference.png",
 		"link": "",
-		"date": "31/12/2015",
+		"date": "Dicembre 2015",
 		"skills": ["Python","Google App Engine"],
 		"description": "",
 		"github": "https://github.com/Gus42/Conference-Organization-App"
@@ -31,7 +31,7 @@ var projectsList = [
 		"name": "Item Catalog",
 		"img": "img/k.jpg",
 		"link": "",
-		"date": "",
+		"date": "Dicembre 2015",
 		"skills": ["HTML/CSS","Python","Flask","SQL"],
 		"description": "",
 		"github": ""
@@ -58,7 +58,7 @@ var projectsList = [
 		"name": "Percolation",
 		"img": "img/percolation.png",
 		"link": "",
-		"date": "13/10/2015",
+		"date": "Ottobre 2015",
 		"skills": ["Java"],
 		"description": "",
 		"github": "https://github.com/Gus42/Percolation"
@@ -67,7 +67,7 @@ var projectsList = [
 		"name": "Jasmine",
 		"img": "img/jasmine.png",
 		"link": "",
-		"date": "",
+		"date": "Ottobre 2015",
 		"skills": ["TDD","Jasmine"],
 		"description": "In this Project I used for the first time a framework for the test drive development of JavaScript",
 		"github": ""
@@ -76,7 +76,7 @@ var projectsList = [
 		"name": "Neighborhood Map",
 		"img": "img/neighborhood-map.png",
 		"link": "http://gus42.github.io/Neighborhood-Map/",
-		"date": "06/10/2015",
+		"date": "Ottobre 2015",
 		"skills": ["HTML/CSS","JavaScript","MVC","Knockout.js","Google Maps API","Foursquare API"],
 		"description": "Neighborhood-Map is a single page application, it is the 5th project of Front-End Web Developer Nanodegree of Udacity."+
 					   "It shows some parks in Nottingham city (UK), the user can search a park in the list or use the map to select it."+
@@ -107,7 +107,7 @@ var projectsList = [
 		"link": "",
 		"date": "",
 		"skills": ["HTML/CSS"],
-		"description": "",
+		"description": "Settembre 2015",
 		"github": ""
 	},
 	{
