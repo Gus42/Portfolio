@@ -9,7 +9,7 @@
 body {
 	margin: 0;
 	/*background-color: #F6E3CE;*/
-	background-color: khaki;
+	background-color: #D3F8D8;
 }
 
 a {
@@ -24,7 +24,8 @@ ul {
 header {
 	margin-top: 20px;
 	padding: 20px 0;
-	background-color: gold;
+	background-color: lawngreen;
+	text-align: center;
 }
 
 ._clear {
@@ -67,12 +68,16 @@ header {
 }
 
 .filter-bar {
+	text-align: center;
 	font-weight: bold;
-	color: #111;
-	cursor: pointer;
-	width: 60px;
-	background-color: #acb;
+	font-size: 23px;
+	width: 100px;
 	padding: 5px;
+	margin: 25px 0;
+	border-radius: 10px;
+	color: #111;
+	background-color: #acb;
+	cursor: pointer;
 }
 
 .filter-bar-open:after {
@@ -128,7 +133,6 @@ header {
 .title {
 	margin-top: 0;
 	font-size: 40px;
-	color: #FF8000;
 }
 
 .subtitle {
@@ -140,8 +144,8 @@ header {
 /* APP STYLE */
 .app {
 	width: 98%;
-	background-color: goldenrod;
-	border: 1px solid silver;
+	background-color: white;
+	border: 2px solid lawngreen;
 	padding: 10px;
 	margin: 1%;
 }
