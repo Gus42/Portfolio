@@ -45,11 +45,10 @@
             <ul class="projects flex" data-bind="foreach: projectsVisible">
                 <div class="app" data-bind="click: $parent.openApp">
                     <div class="app-title" data-bind="text: $data.name"></div>
-                    <img class="app-img" data-bind="attr:{src: $data.img}">
+                    <div class="app-img-box" data-bind="style: { backgroundImage: 'url(\'' + $data.img + '\')' }"></div>
                     <div class="app-skills" data-bind="text: $data.skills"></div>
                     <div class="date" data-bind="text: $data.date"></div>
                     <div class="_clear"></div>
-                    <a class="github" href="" data-bind="text: $data.github"></a>
                 </div>
             </ul>
         </section>
@@ -57,12 +56,14 @@
     <div class="wrapper">
         <div class="app-complete" data-bind="visible: appDetail, foreach: app">
             <div class="app-title" data-bind="text: $data.name"></div>
-            <div class="app-img-box"><img class="app-img" data-bind="attr:{src: $data.img}"></div>
+            <div class="app-img-box" data-bind="style: { backgroundImage: 'url(\'' + $data.img + '\')' }"></div>
             <div class="app-skills" data-bind="text: $data.skills"></div>
             <div class="date" data-bind="text: $data.date"></div>
             <div class="_clear"></div>
             <div class="description" data-bind="html: $data.description"></div>
-            <a class="github" href="" data-bind="text: $data.github"></a>
+            <a class="github" data-bind="attr: { href: $data.github }">
+                <img class="icon" src="img/icon-github.png">
+            </a>
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
