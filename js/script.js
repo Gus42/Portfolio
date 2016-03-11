@@ -5,7 +5,7 @@ var projectsList = [
 		"img": "img/k.jpg",
 		"link": "http://gus42.github.io/Portfolio/",
 		"date": "Febbraio 2016",
-		"skills": ["HTML/CSS","JavaScript","Knockout.js","MVC"],
+		"skills": ["HTML/CSS","JavaScript","Knockout.js"],
 		"description": "",
 		"github": "https://github.com/Gus42/Portfolio"
 	},
@@ -46,15 +46,6 @@ var projectsList = [
 		"github": ""
 	},
 	{
-		"name": "Movie Trailer",
-		"img": "img/k.jpg",
-		"link": "",
-		"date": "",
-		"skills": ["Python"],
-		"description": "",
-		"github": ""
-	},
-	{
 		"name": "Percolation",
 		"img": "img/percolation.png",
 		"link": "",
@@ -77,7 +68,7 @@ var projectsList = [
 		"img": "img/neighborhood-map.png",
 		"link": "http://gus42.github.io/Neighborhood-Map/",
 		"date": "Ottobre 2015",
-		"skills": ["HTML/CSS","JavaScript","MVC","Knockout.js","Google Maps API","Foursquare API"],
+		"skills": ["HTML/CSS","JavaScript","Knockout.js","Google Maps API","Foursquare API"],
 		"description": "Neighborhood-Map is a single page application, it is the 5th project of Front-End Web Developer Nanodegree of Udacity."+
 					   "It shows some parks in Nottingham city (UK), the user can search a park in the list or use the map to select it."+
 					   "A selected park will show the nearest restaurants to it.",
@@ -99,15 +90,6 @@ var projectsList = [
 		"date": "",
 		"skills": ["HTML5:Canvas","JavaScript"],
 		"description": "",
-		"github": ""
-	},
-	{
-		"name": "Interactive Resume",
-		"img": "img/k.jpg",
-		"link": "",
-		"date": "",
-		"skills": ["HTML/CSS"],
-		"description": "Settembre 2015",
 		"github": ""
 	},
 	{
