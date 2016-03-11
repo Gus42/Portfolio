@@ -2,7 +2,7 @@
 var projectsList = [
 	{
 		"name": "This Portfolio",
-		"img": "img/k.jpg",
+		"img": "img/portfolio.png",
 		"link": "http://gus42.github.io/Portfolio/",
 		"date": "Febbraio 2016",
 		"skills": ["HTML/CSS","JavaScript","Knockout.js"],
@@ -29,7 +29,7 @@ var projectsList = [
 	},
 	{
 		"name": "Item Catalog",
-		"img": "img/k.jpg",
+		"img": "img/catalog.png",
 		"link": "",
 		"date": "Dicembre 2015",
 		"skills": ["HTML/CSS","Python","Flask","SQL"],
@@ -38,7 +38,7 @@ var projectsList = [
 	},
 	{
 		"name": "Tournament Results",
-		"img": "img/k.jpg",
+		"img": "img/tournament.png",
 		"link": "",
 		"date": "",
 		"skills": ["Python","SQL"],
@@ -75,15 +75,6 @@ var projectsList = [
 		"github": "https://github.com/Gus42/Neighborhood-Map"
 	},
 	{
-		"name": "Website Optimization",
-		"img": "img/k.jpg",
-		"link": "",
-		"date": "",
-		"skills": ["HTML/CSS"],
-		"description": "",
-		"github": ""
-	},
-	{
 		"name": "Classic Arcade Game Clone",
 		"img": "img/arcade.png",
 		"link": "",
@@ -94,7 +85,7 @@ var projectsList = [
 	},
 	{
 		"name": "Basic Portfolio",
-		"img": "img/k.jpg",
+		"img": "img/udacity-portfolio.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML/CSS"],
@@ -103,7 +94,7 @@ var projectsList = [
 	},
 	{
 		"name": "Cobweb",
-		"img": "img/k.jpg",
+		"img": "img/cobweb.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML5:Canvas","JavaScript","JQuery"],
@@ -112,7 +103,7 @@ var projectsList = [
 	},
 	{
 		"name": "Facebook Reviews",
-		"img": "img/k.jpg",
+		"img": "img/reviews.png",
 		"link": "",
 		"date": "",
 		"skills": ["HTML/CSS","JavaScript","PHP","Facebook Graph API"],
