@@ -8,23 +8,25 @@
     <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 </head>
 <body class="body">
-    <div class="wrapper opacity">
-        <div class="work">WORK IN PROGRESS</div>
-        <div class="link">
-            <a href="https://www.linkedin.com/in/francescogusella"><img class="icon" src="img/icon-linkedin.png" title="See my LinkedIn profile"></a>
-            <a href="https://github.com/Gus42"><img class="icon" src="img/icon-github.png" title="Go to my Github's account"></a>
-            <a href=""><img class="icon" src="img/icon-cv.png" title="Download my cv in pdf"></a>
+    <div class="opacity">
+        <div class="wrapper">
+            <div class="work">WORK IN PROGRESS</div>
+            <div class="link">
+                <a href="https://www.linkedin.com/in/francescogusella"><img class="icon" src="img/icon-linkedin.png" title="See my LinkedIn profile"></a>
+                <a href="https://github.com/Gus42"><img class="icon" src="img/icon-github.png" title="Go to my Github's account"></a>
+                <a href=""><img class="icon" src="img/icon-cv.png" title="Download my cv in pdf"></a>
+            </div>
+            <div class="_clear"></div>
+            <div class="contacts">
+                <div>e-mail gus815@gmail.com</div>
+                <div>Tel. 333 3952481</div>
+            </div>
+            <div class="_clear"></div>
         </div>
-        <div class="_clear"></div>
-        <div class="contacts">
-            <div>e-mail gus815@gmail.com</div>
-            <div>Tel. 333 3952481</div>
-        </div>
-        <div class="_clear"></div>
         <header>
-            <h1 class="title">Francesco Gusella<span class="subtitle">portfolio</span></h1>
+            <h1 class="wrapper title">Francesco Gusella<span class="subtitle">portfolio</span></h1>
         </header>
-        <section class="content">
+        <div class="wrapper">
             <h3>My Projects:</h3>
             <div class="filter">
                 <div class="filter-bar" data-bind="
@@ -32,8 +34,8 @@
                     css: { 'filter-bar-open': filtersVisible() != true, 'filter-bar-close': filtersVisible() != false }
                     ">Filter</div>
                 <div class="filter-table" data-bind="visible: filtersVisible">
-                    <div class="filter-btn" data-bind="click: toggleAllFilters" />Toggle All</div>
-                    <div class="filter-btn" data-bind="click: unselectedAllFilters" />Unselected All</div>
+                    <div class="filter-btn" data-bind="click: toggleAllFilters">Toggle All</div>
+                    <div class="filter-btn" data-bind="click: unselectedAllFilters">Unselected All</div>
                     <div class="_clear"></div>
                     <ul class="skills" data-bind="foreach: skills">
                         <div class="skill">
@@ -42,14 +44,15 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <section>
             <ul class="projects flex" data-bind="foreach: projectsVisible">
                 <div class="app" data-bind="click: $parent.openApp">
                     <div class="app-title" data-bind="text: $data.name"></div>
-                    <img class="app-img" data-bind="attr:{src: $data.img}">
+                    <div class="app-img-box" data-bind="style: { backgroundImage: 'url(\'' + $data.img + '\')' }"></div>
                     <div class="app-skills" data-bind="text: $data.skills"></div>
                     <div class="date" data-bind="text: $data.date"></div>
                     <div class="_clear"></div>
-                    <a class="github" href="" data-bind="text: $data.github"></a>
                 </div>
             </ul>
         </section>
@@ -57,12 +60,14 @@
     <div class="wrapper">
         <div class="app-complete" data-bind="visible: appDetail, foreach: app">
             <div class="app-title" data-bind="text: $data.name"></div>
-            <div class="app-img-box"><img class="app-img" data-bind="attr:{src: $data.img}"></div>
+            <div class="app-img-box" data-bind="style: { backgroundImage: 'url(\'' + $data.img + '\')' }"></div>
             <div class="app-skills" data-bind="text: $data.skills"></div>
             <div class="date" data-bind="text: $data.date"></div>
             <div class="_clear"></div>
             <div class="description" data-bind="html: $data.description"></div>
-            <a class="github" href="" data-bind="text: $data.github"></a>
+            <a class="github" data-bind="attr: { href: $data.github }">
+                <img class="icon" src="img/icon-github.png">
+            </a>
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
