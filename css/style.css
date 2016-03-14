@@ -8,8 +8,7 @@
 
 body {
 	margin: 0;
-	/*background-color: #F6E3CE;*/
-	background-color: #D3F8D8;
+	background-color: #F5FBF6;
 }
 
 a {
@@ -24,12 +23,15 @@ ul {
 header {
 	margin-top: 20px;
 	padding: 20px 0;
-	background-color: lawngreen;
 	text-align: center;
 }
 
 ._clear {
 	clear: both;
+}
+
+._center {
+	text-align: center;
 }
 
 /*  FLEXBOX =================================================*/
@@ -42,6 +44,7 @@ header {
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
+	justify-content: center;
 }
 
 /*  SPECIFIC =================================================*/
@@ -148,10 +151,25 @@ header {
 	border: 2px solid lawngreen;
 	padding: 10px;
 	margin: 1%;
+	position: relative;
 }
 
 .app:hover {
 	cursor: pointer;
+}
+
+.effect {
+	position: absolute;
+    z-index: 20;
+    opacity: 0;
+    background-color: lawngreen;
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.app:hover .effect{
+	opacity: 0.3;
 }
 
 .app-title {
@@ -189,7 +207,7 @@ header {
 }
 
 .github {
-
+	text-align: center;
 }
 
 /* APP DETAILED */
@@ -204,6 +222,10 @@ header {
     background-color: LightCyan;
     border: 1px solid silver;
 	padding: 10px;
+}
+
+.app-complete-padd {
+	padding: 23%;
 }
 
 /* RESPONSIVE ==================================================== */
@@ -269,5 +291,12 @@ header {
 @media screen and (min-width: 1280px) {
 	.app {
 		width: 23%
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.wrap-app {
+		width: 1400px;
+		margin: auto;
 	}
 }
