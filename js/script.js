@@ -5,7 +5,7 @@ var projectsList = [
 		"img": "img/portfolio.png",
 		"link": "http://gus42.github.io/Portfolio/",
 		"date": "Febbraio 2016",
-		"skills": ["HTML/CSS","JavaScript","Knockout.js"],
+		"skills": ["HTML/CSS","JavaScript","Knockout.js","JQuery"],
 		"description": "",
 		"github": "https://github.com/Gus42/Portfolio"
 	},
@@ -14,7 +14,7 @@ var projectsList = [
 		"img": "img/linux-server.png",
 		"link": "",
 		"date": "Dicembre 2015",
-		"skills": ["Linux","Vagrant","Shell Commands"],
+		"skills": ["Linux","Shell Commands"],
 		"description": "",
 		"github": "https://github.com/Gus42/Linux-Server-Configuration"
 	},
@@ -40,7 +40,7 @@ var projectsList = [
 		"name": "Tournament Results",
 		"img": "img/tournament.png",
 		"link": "",
-		"date": "",
+		"date": "Novembre 2015",
 		"skills": ["Python","SQL"],
 		"description": "",
 		"github": ""
@@ -59,8 +59,8 @@ var projectsList = [
 		"img": "img/jasmine.png",
 		"link": "",
 		"date": "Ottobre 2015",
-		"skills": ["TDD","Jasmine"],
-		"description": "In this Project I used for the first time a framework for the test drive development of JavaScript",
+		"skills": ["TDD:Jasmine"],
+		"description": "In this Project I used for the first time a framework for the test driven development of JavaScript",
 		"github": ""
 	},
 	{
@@ -78,7 +78,7 @@ var projectsList = [
 		"name": "Classic Arcade Game Clone",
 		"img": "img/arcade.png",
 		"link": "",
-		"date": "",
+		"date": "Settembre 2015",
 		"skills": ["HTML5:Canvas","JavaScript"],
 		"description": "",
 		"github": ""
@@ -87,25 +87,25 @@ var projectsList = [
 		"name": "Basic Portfolio",
 		"img": "img/udacity-portfolio.png",
 		"link": "",
-		"date": "",
+		"date": "Agosto 2015",
 		"skills": ["HTML/CSS"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/FEND-Portfolio"
 	},
 	{
 		"name": "Cobweb",
 		"img": "img/cobweb.png",
 		"link": "",
-		"date": "",
-		"skills": ["HTML5:Canvas","JavaScript","JQuery"],
+		"date": "Luglio 2015",
+		"skills": ["HTML5:Canvas","JavaScript"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/cobweb-plugin"
 	},
 	{
 		"name": "Facebook Reviews",
 		"img": "img/reviews.png",
 		"link": "",
-		"date": "",
+		"date": "Luglio 2015",
 		"skills": ["HTML/CSS","JavaScript","PHP","Facebook Graph API"],
 		"description": "",
 		"github": "https://github.com/Gus42/Review"
@@ -114,31 +114,31 @@ var projectsList = [
 		"name": "Widescreen Slider",
 		"img": "img/slider.png",
 		"link": "",
-		"date": "",
-		"skills": ["HTML/CSS","JavaScript"],
+		"date": "Giugno 2015",
+		"skills": ["HTML/CSS","JavaScript","JQuery"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Slider"
 	},
 	{
 		"name": "Bekeris",
 		"img": "img/bekeris.png",
 		"link": "",
-		"date": "",
-		"skills": ["HTML/CSS","JavaScript"],
+		"date": "Giugno 2015",
+		"skills": ["HTML/CSS","JavaScript","JQuery"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Bekeris"
 	},
 	{
 		"name": "price4you",
 		"img": "img/price4you.png",
 		"link": "",
-		"date": "28/05/2015",
+		"date": "Maggio 2015",
 		"skills": ["HTML/CSS"],
 		"description": "La pagina price4you nasce da un'esercitazione condotta durante un tirocinio in Lettonia."
 						+"<br>- Scritto in HTML e CSS3."
 						+"<br>- E' la fedele riproduzione in codice del design desiderato."
 						+"<br>- Ho utilizzato Adobe Photoshop per riprodurre fedelmente colori e misure del sito.",
-		"github": ""
+		"github": "https://github.com/Gus42/Price4you"
 	}
 ];
 
@@ -212,6 +212,12 @@ var ViewModel = function() {
 		});
 	}
 
+	// Set Height and Width for the .effect of App
+	self.effect = function(data, event) {
+		$(".effect").width($(event.currentTarget).width() + 20);
+		$(".effect").height($(event.currentTarget).height() + 20);
+	}
+
 	// Open App
 	appDetail = ko.observable(false);
 	app = ko.observable();
@@ -236,8 +242,8 @@ var ViewModel = function() {
 	});
 	*/
 
+
 	$("html").click(function() {
-		console.log("aaaHido la app appdetail e':"+appDetail());
 		if(app()!=null){
 			if(appDetail()){
 				appDetail(false);
