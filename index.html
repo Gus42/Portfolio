@@ -9,25 +9,29 @@
 </head>
 <body class="body">
     <div class="opacity">
-        <div class="wrapper">
-            <div class="work">WORK IN PROGRESS</div>
-            <div class="link">
-                <a href="https://www.linkedin.com/in/francescogusella"><img class="icon" src="img/icon-linkedin.png" title="See my LinkedIn profile"></a>
-                <a href="https://github.com/Gus42"><img class="icon" src="img/icon-github.png" title="Go to my Github's account"></a>
-                <a href="pdf/CV-Francesco-Gusella.pdf" target="_blank"><img class="icon" src="img/icon-cv.png" title="Download my cv in pdf"></a>
+        <div class="image height">
+            <div class="wrapper">
+                <div class="work">WORK IN PROGRESS</div>
+                <div class="link">
+                    <a href="https://www.linkedin.com/in/francescogusella"><img class="icon" src="img/icon-linkedin.png" title="View my LinkedIn profile"></a>
+                    <a href="https://github.com/Gus42"><img class="icon" src="img/icon-github.png" title="Go to my Github's account"></a>
+                    <a href="pdf/CV-Francesco-Gusella.pdf" target="_blank"><img class="icon" src="img/icon-cv.png" title="Download my cv in pdf"></a>
+                </div>
+                <div class="_clear"></div>
+                <div class="contacts">
+                    <div>e-mail gus815@gmail.com</div>
+                    <div>Tel. 333 3952481</div>
+                </div>
+                <div class="_clear"></div>
+                <header>
+                    <h1 class="wrapper title">Francesco Gusella<span class="title-port">portfolio</span></h1>
+                    <div class="subtitle">Web developer, who helps you in publicizing yourself and makes online business. Certified by Udacity.</div>
+                </header>
             </div>
-            <div class="_clear"></div>
-            <div class="contacts">
-                <div>e-mail gus815@gmail.com</div>
-                <div>Tel. 333 3952481</div>
-            </div>
-            <div class="_clear"></div>
         </div>
-        <header>
-            <h1 class="wrapper title">Francesco Gusella<span class="subtitle">portfolio</span></h1>
-        </header>
-        <div class="wrapper">
-            <div class="filter">
+        <section class="wrap-app">
+            <div class="my-port">My portfolio</div>
+            <div class="wrapper">
                 <div class="filter-bar" data-bind="
                     click: toggleFilters,
                     css: { 'filter-bar-open': filtersVisible() != true, 'filter-bar-close': filtersVisible() != false }
@@ -43,8 +47,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <section class="wrap-app">
             <ul class="projects flex" data-bind="foreach: projectsVisible">
                 <div class="app" data-bind="event: { mouseover: $parent.effect }, click: $parent.openApp">
                     <div class="effect"></div>

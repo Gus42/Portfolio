@@ -98,7 +98,11 @@ var projectsList = [
 		"link": "",
 		"date": "Luglio 2015",
 		"skills": ["HTML5:Canvas","JavaScript"],
-		"description": "",
+		"description": "Cobweb è un progetto portato a termine durante un tirocinio in Lettonia. Dato un design mi è stato chiesto di creare 'something cool'."
+						+"<br>- Utilizzanto la canvas di HTML5, scritto in JavaScript."
+						+"<br>- Cobweb è un plugin, responsive al resize della pagina, facilmente applicabile ad un 'div' con una singola riga in JQuery."
+						+"<br>- La canvas interagisce con il mouse, i cerchi 'scappano' dal mouse, e ritornano al loro posto se il mouse si distanzia a sufficienza."
+						+"<br>- Il plugin offre diverse opzioni: raggio d'azione del mouse, raggio dei cerchi, colore, opacità, mumero cerchi.",
 		"github": "https://github.com/Gus42/cobweb-plugin"
 	},
 	{
@@ -107,7 +111,10 @@ var projectsList = [
 		"link": "",
 		"date": "Luglio 2015",
 		"skills": ["HTML/CSS","JavaScript","PHP","Facebook Graph API"],
-		"description": "",
+		"description": "Facebook Reviews è un progetto portato a termine durante un tirocinio in Lettonia."
+						+"<br>- Scritto in HTML, CSS, JavaScript e PHP."
+						+"<br>- Ho fatto uso della Facebook Graph API per ottenere un Access Token col quale ottenere l'accesso ai dati di una pagina Facebook"
+						+"<br>- I dati delle recensioni alla pagina vengono inseriti in una riproduzione fedele della sezione Recensioni di Facebook.",
 		"github": "https://github.com/Gus42/Review"
 	},
 	{
@@ -116,7 +123,12 @@ var projectsList = [
 		"link": "",
 		"date": "Giugno 2015",
 		"skills": ["HTML/CSS","JavaScript","JQuery"],
-		"description": "",
+		"description": "Widescreen Slider nasce da un'esercitazione condotta durante un tirocinio in Lettonia."
+						+"<br>- Scritto in HTML, CSS e JavaScript."
+						+"<br>- L'esercitazione richiedeva di creare una slider:"
+						+"<br> &nbsp &nbsp 1- Con una slide sempre centrata nello schermo"
+						+"<br> &nbsp &nbsp 2- Un numero di slide >=1"
+						+"<br> &nbsp &nbsp  3- In ogni caso, le slide devono essere ripetute in modo tale da coprire la larghezza dello schermo",
 		"github": "https://github.com/Gus42/Slider"
 	},
 	{
@@ -125,7 +137,10 @@ var projectsList = [
 		"link": "",
 		"date": "Giugno 2015",
 		"skills": ["HTML/CSS","JavaScript","JQuery"],
-		"description": "",
+		"description": "La pagina Bekeris nasce da un'esercitazione condotta durante un tirocinio in Lettonia."
+						+"<br>- Scritto in HTML, CSS e JavaScript"
+						+"<br>- E' la fedele riproduzione in codice del design desiderato in formato PSD"
+						+"<br>- Utilizzato la libreia JQuery per creare lo slider",
 		"github": "https://github.com/Gus42/Bekeris"
 	},
 	{
@@ -225,25 +240,9 @@ var ViewModel = function() {
 		app(this);
 	}
 
-	/*
-	document.addEventListener("click", function(e) {
-		console.log("Sto cliccando: "+ e.target);
-	});
-
-	//document.getElementsByTagName("html")[0].click(function() {
-	document.getElementsByClassName("body")[0].click(function() {
-		console.log("Hido la app");
-		document.getElementsByClassName("app-complete").style.display = 'none';
-	});
-
-	document.getElementsByClassName("app-complete")[0].click(function(event) {
-		console.log("fermo l'evento");
-	    event.stopPropagation();
-	});
-	*/
-
-
+	// Handle the click inside or outside the detailed app.
 	$("html").click(function() {
+		console.log(self.height());
 		if(app()!=null){
 			if(appDetail()){
 				appDetail(false);
@@ -261,6 +260,34 @@ var ViewModel = function() {
 	    event.stopPropagation();
 	});
 
+	/*
+	document.addEventListener("click", function(e) {
+		console.log("Sto cliccando: "+ e.target);
+	});
+
+	//document.getElementsByTagName("html")[0].click(function() {
+	document.getElementsByClassName("body")[0].click(function() {
+		console.log("Hido la app");
+		document.getElementsByClassName("app-complete").style.display = 'none';
+	});
+
+	document.getElementsByClassName("app-complete")[0].click(function(event) {
+		console.log("fermo l'evento");
+	    event.stopPropagation();
+	});
+	*/
+	// Take window height and set the right height for the header
+	var $window = $(window);
+	self.height = ko.observable($window.height());
+	$(".height").css('height', self.height());
+	$("header").css('margin-top', self.height()/2-73-57);
+	$window.resize(function() {
+	    self.height($window.height());
+	    $(".height").css('height', self.height());
+	    $("header").css('margin-top', self.height()/2-73-57);
+	});
+
 };
 
 ko.applyBindings(new ViewModel());
+
