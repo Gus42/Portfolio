@@ -26,6 +26,14 @@ header {
 	text-align: center;
 }
 
+p {
+	font-size: 28px;
+}
+
+li {
+	list-style-type: none;
+}
+
 ._clear {
 	clear: both;
 }
@@ -58,6 +66,28 @@ header {
     background-position: 50% 50%;
 }
 
+.nav {
+	float: left;
+	color: #FFE5CD;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.nav-li {
+	padding: 10px;
+	display: inline-block;
+	text-transform: uppercase;
+	text-align: center;
+	border-right: 1px solid #f0a71d;
+	border-bottom: 1px solid #f0a71d;
+}
+
+.nav-li:hover {
+	background-color: #f0a71d;
+	opacity: 0.9;
+	color: black;
+}
+
 .work {
 	float: left;
 	font-size: 30px;
@@ -80,7 +110,8 @@ header {
 }
 
 .title {
-	margin-top: 0;
+	color: #f0a71d;
+	text-shadow: 2px 2px #381D04;
 	font-size: 40px;
 }
 
@@ -88,6 +119,12 @@ header {
 	font-size: 20px;
 	margin-left: 1%;
 	color: dimgrey;
+	text-shadow: 1px 1px #000000;
+}
+
+.subtitle {
+	color: #f0a71d;
+	text-shadow: 1px 1px #000000;
 }
 
 .wrap-app {
@@ -232,11 +269,39 @@ header {
 }
 
 .description {
-
+	font-size: 14px;
 }
 
 .github {
 	text-align: center;
+}
+
+.divider {
+	background-color: #3B342D;
+	height: 100px;
+	overflow: hidden;
+}
+
+.about {
+	text-transform: uppercase;
+	text-align: center;
+	/*color: #C1B8A7;*/
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-top: 57px;
+}
+
+.bio {
+	margin: 63px auto;
+	text-align: justify;
+	color: #3B342D;
+}
+
+.cit {
+	text-align: center;
+	font-style: italic;
 }
 
 /* APP DETAILED */
@@ -248,8 +313,8 @@ header {
 	width: 98%;
     margin: 0 1%;
     z-index: 5;
-    background-color: LightCyan;
-    border: 1px solid silver;
+    background-color: #C1B8A7;
+    border: 1px solid #3B342D;
 	padding: 10px;
 }
 
@@ -260,17 +325,12 @@ header {
 /* RESPONSIVE ==================================================== */
 
 @media screen and (min-width: 450px) {
-	.my-port {
+	.about,.my-port {
 		letter-spacing: 13px;
 	}
 
 	.app {
 		width: 47%;
-	}
-
-	.app-complete {
-		width: 80%;
-		margin: 0 10%;
 	}
 
 	.app-img-box {
@@ -289,14 +349,30 @@ header {
 }
 
 @media screen and (min-width: 600px) {
-	.my-port {
+	.about,.my-port {
 		letter-spacing: 25px;
 	}
 
 	.app-complete {
-		width: 68%;
-		margin: 0 16%;
+		width: 80%;
+		margin: 0 10%;
 	}
+
+	.description {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+	.app-complete {
+		overflow: scroll;
+	    height: 100%;
+	}
+
+	.description {
+		font-size: 13px;
+	}
+
 }
 
 @media screen and (min-width: 960px) {
@@ -306,7 +382,7 @@ header {
 		margin: 0 auto;
 	}
 
-	.my-port {
+	.about,.my-port {
 		letter-spacing: 56px;
 	}
 
