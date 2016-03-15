@@ -49,6 +49,15 @@ header {
 
 /*  SPECIFIC =================================================*/
 
+.image {
+	overflow: hidden;
+    width: 100%;
+    position: relative;
+    background-image: url("../img/hepburn.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
 .work {
 	float: left;
 	font-size: 30px;
@@ -66,8 +75,38 @@ header {
 .contacts {
 	float: right;
 	text-align: right;
-	color: grey;
+	color: #FFE5CD;
 	font-size: 13px;
+}
+
+.title {
+	margin-top: 0;
+	font-size: 40px;
+}
+
+.title-port {
+	font-size: 20px;
+	margin-left: 1%;
+	color: dimgrey;
+}
+
+.wrap-app {
+	background-color: #C1B8A7;
+	overflow: hidden;
+}
+
+.my-port {
+	text-transform: uppercase;
+	text-align: center;
+	color: #3B342D;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-top: -14px;
+}
+
+.filter {
+	margin-top: 20px;
 }
 
 .filter-bar {
@@ -109,7 +148,7 @@ header {
 
 .filter-table {
 	position: absolute;
-	z-index: 5;
+	z-index: 25;
 	margin-left: 0px;
 	margin-top: 5px;
 	width: 100%;
@@ -133,22 +172,12 @@ header {
 	width: 50%;
 }
 
-.title {
-	margin-top: 0;
-	font-size: 40px;
-}
-
-.subtitle {
-	font-size: 20px;
-	margin-left: 1%;
-	color: dimgrey;
-}
-
 /* APP STYLE */
+
 .app {
 	width: 98%;
 	background-color: white;
-	border: 2px solid lawngreen;
+	border: 1px solid #3B342D;
 	padding: 10px;
 	margin: 1%;
 	position: relative;
@@ -162,14 +191,14 @@ header {
 	position: absolute;
     z-index: 20;
     opacity: 0;
-    background-color: lawngreen;
+    background-color: #3B342D;
     top: 0;
     left: 0;
     transition: all 0.6s ease-in-out;
 }
 
 .app:hover .effect{
-	opacity: 0.3;
+	opacity: 0.6;
 }
 
 .app-title {
@@ -231,6 +260,10 @@ header {
 /* RESPONSIVE ==================================================== */
 
 @media screen and (min-width: 450px) {
+	.my-port {
+		letter-spacing: 13px;
+	}
+
 	.app {
 		width: 47%;
 	}
@@ -256,6 +289,10 @@ header {
 }
 
 @media screen and (min-width: 600px) {
+	.my-port {
+		letter-spacing: 25px;
+	}
+
 	.app-complete {
 		width: 68%;
 		margin: 0 16%;
@@ -264,8 +301,13 @@ header {
 
 @media screen and (min-width: 960px) {
 	.wrapper {
+		overflow: hidden;
 		max-width: 980px;
 		margin: 0 auto;
+	}
+
+	.my-port {
+		letter-spacing: 56px;
 	}
 
 	.filter-table {
