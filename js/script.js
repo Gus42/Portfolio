@@ -34,7 +34,7 @@ var projectsList = [
 		"date": "Dicembre 2015",
 		"skills": ["HTML/CSS","Python","Flask","SQL"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Item-Catalog"
 	},
 	{
 		"name": "Tournament Results",
@@ -43,7 +43,7 @@ var projectsList = [
 		"date": "Novembre 2015",
 		"skills": ["Python","SQL"],
 		"description": "",
-		"github": ""
+		"github": "https://github.com/Gus42/Tournament-Results"
 	},
 	{
 		"name": "Percolation",
@@ -61,7 +61,7 @@ var projectsList = [
 		"date": "Ottobre 2015",
 		"skills": ["TDD:Jasmine"],
 		"description": "In this Project I used for the first time a framework for the test driven development of JavaScript",
-		"github": ""
+		"github": "https://github.com/Gus42/Jasmine"
 	},
 	{
 		"name": "Neighborhood Map",
@@ -75,21 +75,14 @@ var projectsList = [
 		"github": "https://github.com/Gus42/Neighborhood-Map"
 	},
 	{
-		"name": "Classic Arcade Game Clone",
-		"img": "img/arcade.png",
-		"link": "",
-		"date": "Settembre 2015",
-		"skills": ["HTML5:Canvas","JavaScript"],
-		"description": "",
-		"github": ""
-	},
-	{
 		"name": "Basic Portfolio",
 		"img": "img/udacity-portfolio.png",
 		"link": "",
 		"date": "Agosto 2015",
 		"skills": ["HTML/CSS"],
-		"description": "",
+		"description": "Il primo progetto del corso online di Udacity: Front-End Web Developer Nanodegree."
+						+"<br>- Utilizzato HTML e CSS"
+						+"<br>- Il sito è responsive, utilizza il grid layout e le flexbox",
 		"github": "https://github.com/Gus42/FEND-Portfolio"
 	},
 	{

@@ -127,8 +127,11 @@ li {
 	text-shadow: 1px 1px #000000;
 }
 
-.wrap-app {
+.portfolio {
 	background-color: #C1B8A7;
+}
+
+.wrap-app {
 	overflow: hidden;
 }
 

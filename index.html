@@ -33,34 +33,36 @@
                 </header>
             </div>
         </div>
-        <section class="wrap-app">
-            <h3 class="my-port">My portfolio</h3>
-            <div class="wrapper">
-                <div class="filter-bar" data-bind="
-                    click: toggleFilters,
-                    css: { 'filter-bar-open': filtersVisible() != true, 'filter-bar-close': filtersVisible() != false }
-                    ">Filter</div>
-                <div class="filter-table" data-bind="visible: filtersVisible">
-                    <div class="filter-btn" data-bind="click: toggleAllFilters">Toggle All</div>
-                    <div class="filter-btn" data-bind="click: unselectedAllFilters">Unselected All</div>
-                    <div class="_clear"></div>
-                    <ul class="skills" data-bind="foreach: skills">
-                        <div class="skill">
-                            <input type="checkbox" data-bind="checked: $data.check" /><span data-bind="text: $data.skill"></span>
-                        </div>
-                    </ul>
+        <section class="portfolio">
+            <div class="wrap-app">
+                <h3 class="my-port">My portfolio</h3>
+                <div class="wrapper">
+                    <div class="filter-bar" data-bind="
+                        click: toggleFilters,
+                        css: { 'filter-bar-open': filtersVisible() != true, 'filter-bar-close': filtersVisible() != false }
+                        ">Filter</div>
+                    <div class="filter-table" data-bind="visible: filtersVisible">
+                        <div class="filter-btn" data-bind="click: toggleAllFilters">Toggle All</div>
+                        <div class="filter-btn" data-bind="click: unselectedAllFilters">Unselected All</div>
+                        <div class="_clear"></div>
+                        <ul class="skills" data-bind="foreach: skills">
+                            <div class="skill">
+                                <input type="checkbox" data-bind="checked: $data.check" /><span data-bind="text: $data.skill"></span>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
+                <ul class="projects flex" data-bind="foreach: projectsVisible">
+                    <div class="app" data-bind="event: { mouseover: $parent.effect }, click: $parent.openApp">
+                        <div class="effect"></div>
+                        <div class="app-title" data-bind="text: $data.name"></div>
+                        <div class="app-img-box" data-bind="style: { backgroundImage: 'url(\'' + $data.img + '\')' }"></div>
+                        <div class="app-skills" data-bind="text: $data.skills"></div>
+                        <div class="date" data-bind="text: $data.date"></div>
+                        <div class="_clear"></div>
+                    </div>
+                </ul>
             </div>
-            <ul class="projects flex" data-bind="foreach: projectsVisible">
-                <div class="app" data-bind="event: { mouseover: $parent.effect }, click: $parent.openApp">
-                    <div class="effect"></div>
-                    <div class="app-title" data-bind="text: $data.name"></div>
-                    <div class="app-img-box" data-bind="style: { backgroundImage: 'url(\'' + $data.img + '\')' }"></div>
-                    <div class="app-skills" data-bind="text: $data.skills"></div>
-                    <div class="date" data-bind="text: $data.date"></div>
-                    <div class="_clear"></div>
-                </div>
-            </ul>
         </section>
         <div class="divider">
             <h3 class="about">About me</h3>
