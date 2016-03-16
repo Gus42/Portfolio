@@ -227,6 +227,8 @@ var ViewModel = function() {
 		});
 	}
 
+
+
 	// Set Height and Width for the .effect of App
 	self.effect = function(data, event) {
 		$(".effect").width($(event.currentTarget).width() + 20);
@@ -240,9 +242,14 @@ var ViewModel = function() {
 		app(this);
 	}
 
+	self.closeApp = function () {
+		appDetail(false);
+		app(null);
+		$(".opacity").css('opacity', '1');
+	}
+
 	// Handle the click inside or outside the detailed app.
 	$("html").click(function() {
-		console.log(self.height());
 		if(app()!=null){
 			if(appDetail()){
 				appDetail(false);
@@ -256,7 +263,6 @@ var ViewModel = function() {
 	});
 
 	$(".app-complete").click(function(event) {
-		console.log("fermo l'evento");
 	    event.stopPropagation();
 	});
 
@@ -287,6 +293,20 @@ var ViewModel = function() {
 	    $("header").css('margin-top', self.height()/2-73-57);
 	});
 
+	// Navigate to.
+	self.goToPort = function() {
+		scroll($(".wrap-app").position().top)
+	}
+
+	goToAbout = function() {
+		scroll($(".divider").position().top)
+	}
+
+	function scroll(x) {
+		$('body').animate({
+        	scrollTop: x
+        }, 1000);
+	}
 };
 
 ko.applyBindings(new ViewModel());

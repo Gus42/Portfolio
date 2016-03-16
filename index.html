@@ -12,8 +12,8 @@
         <div class="image height">
             <div class="wrapper">
                 <nav class="nav">
-                    <li class="nav-li">My Portfolio</li>
-                    <li class="nav-li">About me</li>
+                    <li class="nav-li" data-bind="click: goToPort">My Portfolio</li>
+                    <li class="nav-li" data-bind="click: goToAbout">About me</li>
                     <div class="_clear"></div>
                 </nav>
                 <div class="link">
@@ -75,6 +75,8 @@
     <div class="wrapper">
         <div class="app-complete" data-bind="visible: appDetail, foreach: app">
             <div class="app-title" data-bind="text: $data.name"></div>
+            <img class="close" src="img/close-icon2.png" data-bind="click: $parent.closeApp">
+            <div class="_clear"></div>
             <div class="app-img-box app-complete-padd" data-bind="style: { backgroundImage: 'url(\'' + $data.img + '\')' }"></div>
             <div class="app-skills" data-bind="text: $data.skills"></div>
             <div class="date" data-bind="text: $data.date"></div>

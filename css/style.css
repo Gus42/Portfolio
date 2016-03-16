@@ -27,7 +27,7 @@ header {
 }
 
 p {
-	font-size: 28px;
+	font-size: 20px;
 }
 
 li {
@@ -216,7 +216,7 @@ li {
 	background-color: white;
 	border: 1px solid #3B342D;
 	padding: 10px;
-	margin: 1%;
+	margin: 10px 1%;
 	position: relative;
 }
 
@@ -294,12 +294,13 @@ li {
 }
 
 .bio {
-	margin: 63px auto;
+	margin: 32px 5px;
 	text-align: justify;
 	color: #3B342D;
 }
 
 .cit {
+	margin-top: 0;
 	text-align: center;
 	font-style: italic;
 }
@@ -316,6 +317,13 @@ li {
     background-color: #C1B8A7;
     border: 1px solid #3B342D;
 	padding: 10px;
+}
+
+.close {
+	width: 20px;
+	float: right;
+	margin-top: -30px;
+	cursor: pointer;
 }
 
 .app-complete-padd {
@@ -351,6 +359,7 @@ li {
 @media screen and (min-width: 600px) {
 	.about,.my-port {
 		letter-spacing: 25px;
+		margin-right: -25px;
 	}
 
 	.app-complete {
@@ -369,6 +378,10 @@ li {
 	    height: 100%;
 	}
 
+	.app-complete-padd {
+		padding: 20%;
+	}
+
 	.description {
 		font-size: 13px;
 	}
@@ -384,6 +397,7 @@ li {
 
 	.about,.my-port {
 		letter-spacing: 56px;
+		margin-right: -56px;
 	}
 
 	.filter-table {
@@ -398,6 +412,14 @@ li {
 
 	.app {
 		width: 31.33%
+	}
+
+	p {
+		font-size: 28px;
+	}
+
+	.bio {
+		margin: 63px auto;
 	}
 
 	.app-complete {
