@@ -305,6 +305,11 @@ li {
 	font-style: italic;
 }
 
+.llap {
+	margin-left: 3px;
+	vertical-align:sub;
+}
+
 /* APP DETAILED */
 .app-complete {
 	position: fixed;
