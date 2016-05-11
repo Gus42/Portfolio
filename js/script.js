@@ -296,7 +296,7 @@ var ViewModel = function() {
 	}
 
 	function scroll(x) {
-		$('body').animate({
+		$('body,html').animate({
         	scrollTop: x
         }, 1000);
 	}
